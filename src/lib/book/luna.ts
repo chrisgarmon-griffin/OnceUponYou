@@ -1,0 +1,193 @@
+import { AGE_BANDS, occasionById, PRONOUNS, styleById, themeById } from "./config";
+import type { Book } from "./types";
+
+const trucks = [
+  { x: 78, y: 74 },
+  { x: 22, y: 70 },
+  { x: 82, y: 84 },
+  { x: 14, y: 80 },
+  { x: 88, y: 72 },
+  { x: 18, y: 86 },
+  { x: 84, y: 88 },
+  { x: 12, y: 78 },
+  { x: 86, y: 80 },
+  { x: 16, y: 88 },
+  { x: 76, y: 84 },
+  { x: 10, y: 76 },
+];
+
+export const LUNA_BOOK: Book = {
+  slug: "luna",
+  title: "Luna and the Very Big Job",
+  refrain: "Beep, beep, back it up!",
+  dedication: "For Luna, who was a big sister before she knew it.",
+  fromName: "Love, Grandma Jo",
+  coverImage: "/books/luna/cover.jpg",
+  illustrated: true,
+  createdAt: "2026-09-18",
+  backCover:
+    "Every Tuesday, Luna and Biscuit wait for the garbage truck. This Tuesday, everything at home is changing, and a truck is stuck in the biggest puddle on Maple Street. A book about being small, being brave, and becoming a big sister.",
+  parentNote: "Let Luna shout the refrain. By the third read she will beat you to it.",
+  brief: {
+    name: "Luna",
+    age: 4,
+    pronouns: PRONOUNS.she,
+    pronounKey: "she",
+    band: AGE_BANDS.preschool,
+    interests: ["garbage trucks", "her dog Biscuit", "jumping in puddles"],
+    companion: {
+      name: "Biscuit",
+      kind: "scruffy brown dog",
+      look: "one floppy ear, one ear that stands up",
+    },
+    appearance: {
+      hair: "curly dark brown hair in two puffs",
+      skin: "light brown skin",
+      eyes: "dark brown",
+      glasses: false,
+      signatureItem: "yellow rain boots",
+      other: "",
+    },
+    hometown: "a blue house on Maple Street",
+    occasion: occasionById("new_sibling"),
+    theme: themeById("adventure"),
+    style: styleById("watercolor"),
+    dedication: "",
+    fromName: "Love, Grandma Jo",
+    readerNotes: "Her baby brother Theo arrives next month.",
+  },
+  pages: [
+    {
+      n: 1,
+      text: 'Every Tuesday, the garbage truck rumbled down Maple Street. Luna waited on the porch in her yellow boots. Biscuit waited in his fur. "Beep, beep, back it up!" Luna called.',
+      scene:
+        "Luna stands on the front porch of a blue house, yellow boots planted wide, one arm raised toward a green garbage truck coming up the street. Biscuit sits beside her with his floppy ear flopped.",
+      heroExpression: "delighted",
+      shot: "wide",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-01.jpg",
+      truck: trucks[0],
+    },
+    {
+      n: 2,
+      text: "But this Tuesday, the house was different. There was a tiny bed in the hallway. There were tiny socks on the stairs. Nobody was on the porch but Luna and Biscuit.",
+      scene:
+        "Luna peeks around a hallway corner at a small white crib. Tiny socks sit on the stair steps. Biscuit sniffs one sock. The front door is open behind them, porch empty.",
+      heroExpression: "puzzled",
+      shot: "medium",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-02.jpg",
+      truck: trucks[1],
+    },
+    {
+      n: 3,
+      text: 'Mama was busy. Papa was busy. The garbage truck went by, and nobody said "Beep, beep, back it up!" except Luna. Biscuit sighed a long dog sigh.',
+      scene:
+        "Luna at the window in her boots, watching the garbage truck pass. Behind her, two grown-ups carry boxes, backs turned. Biscuit lies flat on the floor with his chin on his paws.",
+      heroExpression: "small and quiet",
+      shot: "medium",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-03.jpg",
+      truck: trucks[2],
+    },
+    {
+      n: 4,
+      text: 'Luna sat in the biggest puddle she could find. "Biscuit," she said, "what if there is no room for me now?" Biscuit licked her nose. That is what Biscuit says when he does not know.',
+      scene:
+        "Luna sits right in the middle of a wide grey puddle on the sidewalk, boots splashed, knees up. Biscuit leans in and licks her nose. Grey clouds, a little drizzle.",
+      heroExpression: "worried",
+      shot: "close",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-04.jpg",
+      truck: trucks[3],
+    },
+    {
+      n: 5,
+      text: "Then, from the end of the street, a rumble. Not a Tuesday rumble. Bigger. The garbage truck was back, and its wheels were stuck in a puddle as big as a pond.",
+      scene:
+        "Luna stands up from her puddle and stares down the street. The green garbage truck sits tilted, back wheels sunk in an enormous puddle, water spraying. Biscuit's ears both stand straight up.",
+      heroExpression: "wide-eyed",
+      shot: "wide",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-05.jpg",
+      truck: trucks[4],
+    },
+    {
+      n: 6,
+      text: 'The driver leaned out. "We need someone small, someone brave, and someone with boots," she said. Luna looked at her boots. Luna looked at Biscuit. "Beep, beep, back it up!"',
+      scene:
+        "The truck driver, a woman in a bright vest, leans out of the cab window looking down at Luna. Luna looks down at her own yellow boots. Biscuit looks at Luna.",
+      heroExpression: "deciding",
+      shot: "medium",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-06.jpg",
+      truck: trucks[5],
+    },
+    {
+      n: 7,
+      text: "Luna splashed to the front of the truck. She waved her arms the way the drivers do. Left a little. Right a little. Biscuit barked once for stop and twice for go.",
+      scene:
+        "Luna stands in front of the huge truck, tiny against its grille, both arms out directing it like a traffic guide. Water splashes around her boots. Biscuit barks beside her, mouth open.",
+      heroExpression: "fierce and focused",
+      shot: "wide",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-07.jpg",
+      truck: trucks[6],
+    },
+    {
+      n: 8,
+      text: "The wheels spun. The puddle splashed. And then, with a great big GRRRUMBLE, the truck rolled free. The driver honked three times. That is garbage-truck for thank you.",
+      scene:
+        "The garbage truck lurches forward out of the puddle, water flying in an arc. Luna jumps with both boots off the ground, arms up. Biscuit leaps too. The driver waves out the window.",
+      heroExpression: "triumphant",
+      shot: "wide",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-08.jpg",
+      truck: trucks[7],
+    },
+    {
+      n: 9,
+      text: "Luna marched home dripping, with Biscuit dripping behind her. The tiny bed was still in the hallway. The tiny socks were still on the stairs. But Luna was not worried anymore.",
+      scene:
+        "Luna walks up the porch steps of the blue house, soaked, boots leaving puddle prints, chin high. Biscuit trots behind shaking water off. The open door shows the little crib inside.",
+      heroExpression: "proud",
+      shot: "medium",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-09.jpg",
+      truck: trucks[8],
+    },
+    {
+      n: 10,
+      text: 'Inside, Mama held something small and squishy and new. "Luna," Mama said, "this is your brother, Theo. He has never seen a garbage truck." Luna gasped. "Never?"',
+      scene:
+        "Luna stands very still in the hallway, hands over her mouth, looking at a bundled baby held by a grown-up whose face is soft and tired. Biscuit sits politely. The tiny socks are now on the baby.",
+      heroExpression: "astonished",
+      shot: "close",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-10.jpg",
+      truck: trucks[9],
+    },
+    {
+      n: 11,
+      text: '"Then I have a very big job," said Luna. She put her yellow boots by the door, next to a pair no bigger than her thumb. "Next Tuesday," she whispered to Theo, "I will show you everything."',
+      scene:
+        "Luna kneels by the front door lining up her yellow boots beside a pair of tiny baby booties. She leans toward the crib whispering. Biscuit curls up between the boots and the crib.",
+      heroExpression: "tender and serious",
+      shot: "close",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-11.jpg",
+      truck: trucks[10],
+    },
+    {
+      n: 12,
+      text: 'And every Tuesday after that, three of them waited on the porch. Luna in her boots. Biscuit in his fur. And Theo, learning the most important words on Maple Street: "Beep, beep, back it up!"',
+      scene:
+        "The porch of the blue house on a bright morning. Luna in her boots holds up a bundled baby so he can see the green garbage truck coming. Biscuit sits tall beside them. The driver waves.",
+      heroExpression: "glowing",
+      shot: "wide",
+      hiddenDetail: "a tiny red toy garbage truck",
+      image: "/books/luna/page-12.jpg",
+      truck: trucks[11],
+    },
+  ],
+};

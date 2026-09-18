@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4efe6;
+  --color-paper-2: #ebe4d6;
+  --color-paper-3: #e0d6c6;
+  --color-ink: #1c1713;
+  --color-ink-soft: #3a322c;
+  --color-muted: #7a7168;
+  --color-moss: #3d5648;
+  --color-moss-2: #2f4438;
+  --color-line: #d9d0c3;
+  --color-night: #161310;
+  --color-night-2: #221c18;
+  --color-night-paper: #2a241f;
+  --color-cream: #f7f3eb;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-ui: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-ui);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.paper-grain {
+  background-image: url("/books/luna/grain.png");
+  background-size: 180px 180px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.book-shadow {
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--color-ink) 8%, transparent),
+    18px 28px 60px color-mix(in oklab, var(--color-ink) 18%, transparent);
+}
+
+.page-enter {
+  animation: page-in 420ms var(--ease-out-soft) both;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.page-enter-left {
+  animation: page-in-left 420ms var(--ease-out-soft) both;
+}
+
+@keyframes page-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.stagger-in > * {
+  animation: rise 500ms var(--ease-out-soft) both;
+}
+.stagger-in > *:nth-child(1) {
+  animation-delay: 40ms;
+}
+.stagger-in > *:nth-child(2) {
+  animation-delay: 120ms;
+}
+.stagger-in > *:nth-child(3) {
+  animation-delay: 200ms;
+}
+.stagger-in > *:nth-child(4) {
+  animation-delay: 280ms;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.honk-pop {
+  animation: honk 420ms var(--ease-out-soft);
+}
+
+@keyframes honk {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.06) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.found-ring {
+  animation: found 700ms var(--ease-out-soft);
+}
+
+@keyframes found {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}
